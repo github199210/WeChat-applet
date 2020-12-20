@@ -1,0 +1,27 @@
+<!--index.wxml-->
+<view class="todo-header">
+  <image src="{{imgSrc}}"></image>
+  <input placeholder="Anything Here..." value="{{inputValue}}" bindinput="onInput" bindconfirm="addValue" />
+</view>
+<block wx:if="{{lists.length>0}}">
+  <view class="todo-main">
+    <block wx:for="{{lists}}" wx:key='id'>
+      <view class="todo-list">
+        <icon type="{{item.flag?'success':'circle'}}" data-id="{{item.id}}" bindtap="edit"></icon>
+        <text class="{{item.flag?'complete':''}}">{{item.item}}</text>
+        <icon type="clear" data-id="{{item.id}}" bindtap="clear"></icon>
+      </view>
+    </block>
+  </view>
+  <view class="todo-footer">
+    <text bindtap="toggle">toggle all</text>
+    <text>{{leftCount}} items left</text>
+    <text bindtap="clearComplete" hidden="{{!isShowClear}}">clear completed</text>
+  </view>
+</block>
+<block wx:else>
+  <view class="todo-tips">
+    <view class="title">Congratulations!</view>
+    <view class="content">There's no more work left</view>
+  </view>
+</block>

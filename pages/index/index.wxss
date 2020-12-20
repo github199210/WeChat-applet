@@ -1,0 +1,55 @@
+page{
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.todo-header{
+  padding: 10rpx;
+  border: 2rpx solid #ccc;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 20rpx #ccc;
+}
+.todo-header image{
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 20rpx;
+}
+.todo-header input{
+  font-size: 32rpx;
+}
+.todo-main{
+  border: 2rpx solid #ccc;
+  border-bottom: none;
+  margin-top: 20rpx;
+}
+.todo-list{
+  border-bottom: 2rpx solid #ccc;
+  padding: 10rpx;
+  display: flex;
+  align-items: center;
+
+}
+.todo-list text{
+  flex: 1;
+  margin-left: 20rpx;
+}
+.todo-list text.complete{
+  text-decoration: line-through;
+  color: #999;
+}
+.todo-footer{
+  color: #999;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20rpx;
+  font-size: 30rpx;
+}
+.todo-tips{
+  text-align: center;
+  margin-top: 100rpx;
+  color: #999;
+}
+.todo-tips .title{
+  font-size: 40rpx;
+  margin-bottom: 50rpx;
+}
